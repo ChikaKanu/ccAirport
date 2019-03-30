@@ -17,5 +17,19 @@ public class FlightTest {
         assertEquals(PlaneType.BOING737, flight.getPlane());
     }
 
+    @Test
+    public void hasFlightNumber() {
+        assertEquals(3024, flight.getFlightNumber());
+    }
+
+    @Test
+    public void hasDestination() {
+        assertEquals("France", flight.getDestination());
+    }
+
+    @Test
+    public void hasGate() {
+        assertEquals(Gate.GATE1, flight.getGate());
+    }
 
 }

@@ -17,4 +17,15 @@ public class Flight {
         return this.plane;
     }
 
+    public int getFlightNumber() {
+        return this.flightNumber;
+    }
+
+    public String getDestination() {
+        return this.destination;
+    }
+
+    public Gate getGate() {
+        return this.gate;
+    }
 }
