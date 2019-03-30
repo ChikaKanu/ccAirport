@@ -9,12 +9,12 @@ public class FlightTest {
 
     @Before
     public void before() {
-        flight = new Flight (PlaneType.BOING737, 3024, "France", 0);
+        flight = new Flight (PlaneType.BOING737, 3024, "France", Gate.GATE1);
     }
 
     @Test
-    public void getName() {
-        assertEquals(PlaneType.BOING737, flight.getName());
+    public void hasName() {
+        assertEquals(PlaneType.BOING737, flight.getPlane());
     }
 
 
