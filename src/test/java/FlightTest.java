@@ -1,6 +1,7 @@
 import org.junit.Before;
+import org.junit.Test;
 
-import java.util.ArrayList;
+import static org.junit.Assert.assertEquals;
 
 public class FlightTest {
 
@@ -10,5 +11,11 @@ public class FlightTest {
     public void before() {
         flight = new Flight (PlaneType.BOING737, 3024, "France", 0);
     }
+
+    @Test
+    public void getName() {
+        assertEquals(PlaneType.BOING737, flight.getName());
+    }
+
 
 }

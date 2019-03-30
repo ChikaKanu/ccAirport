@@ -14,4 +14,5 @@ public class Flight {
         this.gate = gate;
 
     }
+
 }
