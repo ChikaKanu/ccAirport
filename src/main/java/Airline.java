@@ -12,4 +12,16 @@ public class Airline {
         return this.airline;
     }
 
+    public String getContact() {
+        return this.contact;
+    }
+
+    public void addAirline(String newAirline) {
+        this.airline = newAirline;
+    }
+
+    public void addContact(String newContact) {
+        this.contact = newContact;
+    }
+
 }

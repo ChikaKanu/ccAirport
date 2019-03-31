@@ -14,8 +14,19 @@ public class AirlineTest {
     }
 
     @Test
+    public void canAddContact() {
+        airline.addContact("0131456782");
+        assertEquals("0131456782", airline.getContact());
+    }
+    @Test
     public void canGetAirline() {
         assertEquals("AirFrance", airline.getAirline());
+    }
+
+    @Test
+    public void canAddAirline() {
+        airline.addAirline("BA");
+        assertEquals("BA", airline.getAirline());
     }
 
 }
