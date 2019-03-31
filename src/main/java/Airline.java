@@ -1,9 +1,15 @@
 public class Airline {
-    private String airline;
-    private Double bank;
 
-    public Airline(String airline, Double bank) {
+    private String airline;
+    private String contact;
+
+    public Airline(String airline, String contact) {
         this.airline = airline;
-        this.bank = bank;
+        this.contact = contact;
     }
+
+    public String getAirline() {
+        return this.airline;
+    }
+
 }
