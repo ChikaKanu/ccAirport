@@ -32,4 +32,13 @@ public class FlightTest {
         assertEquals(Gate.GATE1, flight.getGate());
     }
 
+    @Test
+    public void canAddFlight() {
+        flight.addFlight(PlaneType.BOING777, 4024, "London", Gate.GATE6);
+        assertEquals(PlaneType.BOING777, flight.getPlane());
+        assertEquals(4024, flight.getFlightNumber());
+        assertEquals("London", flight.getDestination());
+        assertEquals(Gate.GATE6, flight.getGate());
+    }
+
 }

@@ -28,4 +28,11 @@ public class Flight {
     public Gate getGate() {
         return this.gate;
     }
+
+    public void addFlight(PlaneType newPlane, int newFlightNumber, String newDestination, Gate newGate) {
+        this.plane = newPlane;
+        this.flightNumber = newFlightNumber;
+        this.destination = newDestination;
+        this.gate = newGate;
+    }
 }
