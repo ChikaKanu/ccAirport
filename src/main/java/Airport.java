@@ -6,12 +6,13 @@ public class Airport {
     private String airportCode;
     private double bank;
     private ArrayList<Hangar> collectionOfHangars;
+    private double flight;
     private HashMap<String, Gate> collectionOfFlightToGates;
     private HashMap<String, Double> departures;
     private HashMap<String, Double> arrivals;
     private HashMap<String, String> planeToHangars;
 
-    public Airport(String airportCode, double bank) {
+    public Airport(String airportCode, double bank, double flight) {
         this.airportCode = airportCode;
         this.bank = bank;
         this.collectionOfHangars = new ArrayList<>();
@@ -19,6 +20,7 @@ public class Airport {
         this.departures = new HashMap<>();
         this.arrivals = new HashMap<>();
         this.planeToHangars = new HashMap<>();
+        this.flight = flight;
     }
 
     public String getAirportCode() {
@@ -29,12 +31,12 @@ public class Airport {
         return this.bank;
     }
 
-    public void recieveMoney(double amount) {
+    public void sellTickets(double amount) {
        double bankAmount = this.bank;
        this.bank = bankAmount + amount;
     }
 
-    public void payMoney(double amount) {
+    public void payCharges(double amount) {
         double bankAmount = this.bank;
         this.bank = bankAmount - amount;
     }
@@ -47,27 +49,12 @@ public class Airport {
         this.collectionOfHangars.remove(hangar);
     }
 
-//    public Flight createFlight() {
-//
-//    }
+    public void createFlight(double newFlight) {
+        this.flight = newFlight;
+    }
 
+    public double getFlight() {
+        return this.flight;
+    }
 
-
-
-
-
-
-
-
-
-//
-//    public void recieveMoney(double amount) {
-//        double bankAmount = this.bank;
-//        this.bank = bankAmount + amount;
-//    }
-//
-//    public void payMoney(double amount) {
-//        double bankAmount = this.bank;
-//        this.bank = bankAmount - amount;
-//    }
 }
